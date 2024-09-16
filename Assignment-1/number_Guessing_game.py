@@ -2,7 +2,7 @@ import random
 
 def guess_game():
     number=random.randint(1,100)
-    print(number)
+    # print(number)
     count=0
     while True:
         try:
@@ -19,7 +19,7 @@ def guess_game():
             print("Invalid Input")
           
 def main():
-    print("Welcome to Guessing Game")
+    print("**Welcome to Guessing Game**")
     print("You have to guess a number between 1 and 100")
     guess_game()
 if __name__ == "__main__":
