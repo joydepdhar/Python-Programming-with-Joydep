@@ -6,11 +6,11 @@ def multiplication(a,b):
     return a*b
 def division(a,b):
     if b==0:
-        return "Error: Division by zero is not allowed"
-    return a/b
+        return "MathError: Division by zero(0) is not allowed"
+    return round(a/b,2)
 def modulus(a,b):
     if b==0:
-        return "Error: Division by zero is not allowed"
+        return "MathError: Division by zero(0) is not allowed"
     return a%b
 
 
@@ -36,22 +36,22 @@ def main():
             continue
         if choice == '1':
             result = addition(a, b)
-            print(f"{a} + {b} = {result}")
+            print(f"Addition of {a} + {b} = {result}")
         
         elif choice == '2':
             result = subtraction(a, b)
-            print(f"{a} - {b} = {result}")
+            print(f"Subtraction of {a} - {b} = {result}")
         
         elif choice == '3':
             result = multiplication(a, b)
-            print(f"{a} * {b} = {result}")
+            print(f"Multiplication of {a} * {b} = {result}")
         
         elif choice == '4':
             result = division(a, b)
-            print(f"{a} / {b} = {result}")
+            print(f"Division of {a} / {b} = {result}")
         
         elif choice == '5':
             result = modulus(a, b)
-            print(f"{a} % {b} = {result}")
+            print(f"Modulus of {a} % {b} = {result}")
 if __name__ == "__main__":
     main()

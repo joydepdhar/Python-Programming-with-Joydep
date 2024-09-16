@@ -9,16 +9,12 @@ def guess_game():
             a=int(input("Enter Your Guess: "))
             count+=1 
             if number==a:
-                # print("Congratulations! You guessed it right.")
-                # print('Your try: ',count)
                 print(f"Congratulations! You've guessed the number in {count} attempts.")
                 break
             elif a>number:
                 print("too high!")
             elif a<number:
                 print("too low!")
-            # else:
-            #     print("Sorry,Try again")
         except ValueError:
             print("Invalid Input")
           
