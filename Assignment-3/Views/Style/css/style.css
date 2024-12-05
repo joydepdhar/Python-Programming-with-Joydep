@@ -1,0 +1,398 @@
+*body {
+  padding: 10px;
+}
+.custom-button {
+  background-color: #4caf50;
+  border-radius: 20px;
+  color: white;
+  padding: 7px 30px;
+}
+.extra-hover {
+  padding-right: 20px;
+  color: white;
+}
+.back-summary {
+  color: gray;
+}
+.Bootslander-box {
+  color: white;
+  border-bottom: 4px solid rgb(7, 245, 213);
+}
+.extra-hover:hover {
+  border-bottom: 3px solid skyblue;
+}
+.custom-watch-button {
+  border-radius: 20px;
+  padding: 7px 30px;
+}
+.hero-image {
+  padding: 20px;
+  width: 40px;
+}
+.hero-image img {
+  width: 400px;
+}
+.Nav-Hero-container {
+  padding: 0px 100px;
+  /* background-image: url(../../../Assets/hero-bg-2.jpg); */
+  background-image: linear-gradient(
+      rgba(115, 11, 184, 0.9),
+      rgba(4, 14, 199, 0.9)
+    ),
+    url(../../../Assets/hero-bg-2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Get Started Button */
+.custom-button {
+  background-color: #21d0a7;
+  color: #fff;
+}
+
+.custom-button:hover {
+  background-color: #19b08e;
+  color: #fff;
+}
+.custom-watch-button {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.custom-watch-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Play Icon Styles */
+.custom-watch-button i {
+  margin-right: 8px;
+  font-size: 18px;
+  display: inline-block;
+}
+.about-us .badge {
+  font-size: 0.9rem;
+  padding: 0.5em 1em;
+  border-radius: 0.5rem;
+}
+
+.about-us .card {
+  border: none;
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-us .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-us .icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: #0d6efd;
+}
+.card-movement-card {
+  position: relative;
+  top: -22px;
+}
+/* more about us box-start */
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 15px;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #2b2d5f;
+}
+.icon-box:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+.icon-box i {
+  font-size: 24px;
+  margin-right: 15px;
+}
+.icon-title {
+  font-weight: bold;
+}
+/* more about us box-end */
+/* more and more about us start */
+.stats-section {
+  padding: 50px 0;
+}
+.stat-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.stat-card i {
+  background: #e5f6ff;
+  color: #00c9a7;
+  font-size: 40px;
+  border-radius: 50%;
+  padding: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  top: -66px;
+}
+.stat-card h3 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+.stat-card p {
+  font-size: 16px;
+  color: #666;
+}
+/* .card-movement {
+  position: absolute;
+}
+.card-icon {
+  position: relative;
+  top: 20px;
+} */
+/* more and more about us end */
+/* check our product image start */
+.details-section {
+  padding: 50px 0;
+}
+.details-image {
+  max-width: 50%;
+}
+.details-title {
+  color: #2a2a8e; /* Blue color for the title */
+  font-weight: 700;
+}
+.details-description {
+  color: #555;
+}
+.check-icon {
+  color: #21d0a7; /* Green check icon color */
+}
+/* check our product image end */
+/* second image and flex start */
+.details-section {
+  padding: 50px 15px;
+}
+
+.details-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1a1a7f;
+}
+
+.details-description {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.details-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+ul.list-unstyled {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.list-unstyled li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.check-icon {
+  color: #007bff;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+/* second image and flex End */
+
+/* testimonial and plus start  */
+.testimonial-section {
+  background: linear-gradient(
+      180deg,
+      rgba(29, 39, 78, 0.8),
+      rgba(33, 37, 41, 0.9)
+    ),
+    url("../../../Assets/testimonials-bg.jpg") center center no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 200px;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #fff;
+}
+
+.user-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.user-title {
+  font-size: 1rem;
+  color: #c0c7d1;
+}
+
+.stars span {
+  font-size: 1.25rem;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+}
+/* testimonial and plus end */
+/* Contact part start */
+.contact-section {
+  padding: 50px 0;
+}
+.contact-section h2 {
+  color: #2b2d5f;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.contact-info {
+  margin-bottom: 30px;
+}
+.contact-info i {
+  font-size: 24px;
+  color: #00d478;
+  margin-right: 15px;
+}
+.contact-info h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.contact-info p {
+  margin: 0;
+  color: #6c757d;
+}
+.form-control {
+  border-radius: 5px;
+}
+.btn-submit {
+  background-color: #00d478;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+}
+.btn-submit:hover {
+  background-color: #00b363;
+}
+/* Contact part end */
+/* team and manpower start */
+.team-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.team-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.social-icons i {
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: #007bff;
+}
+/* team and manpower end */
+/* pricing and plan start */
+.pricing-title {
+  margin-bottom: 50px;
+  color: #116bc4;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.popular-badge {
+  background-color: #28a745;
+  color: white;
+  font-size: 0.8rem;
+  padding: 3px 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.btn-primary {
+  background-color: #28a745;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+}
+
+.card .price {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+.features li {
+  margin-bottom: 10px;
+}
+
+.features li.inactive {
+  color: #adb5bd;
+  text-decoration: line-through;
+}
+/* pricing and plan end */
+.footer-section {
+  background-color: #0c60b4;
+  padding: 20px;
+}
