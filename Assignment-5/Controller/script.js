@@ -1,4 +1,5 @@
 let cart = [];
+let appliedPromoCode = null; // Track applied promo code
 
 // Fetch and display products
 async function fetchProducts(query = "") {
@@ -93,11 +94,11 @@ function updateCartUI() {
   const cartTotal = document.getElementById("cart-total");
 
   cartItems.innerHTML = "";
-  let total = 0;
+  let subtotal = 0;
 
   cart.forEach((item) => {
     const itemTotal = item.price * item.quantity;
-    total += itemTotal;
+    subtotal += itemTotal;
 
     const row = document.createElement("tr");
     row.innerHTML = `
@@ -123,11 +124,53 @@ function updateCartUI() {
     cartItems.appendChild(row);
   });
 
+  const discount = calculateDiscount(subtotal);
+  const total = subtotal - discount;
+
+  document.getElementById(
+    "cart-subtotal"
+  ).textContent = `Subtotal: $${subtotal.toFixed(2)}`;
+  document.getElementById(
+    "cart-discount"
+  ).textContent = `Discount: $${discount.toFixed(2)}`;
   cartTotal.textContent = `Total: $${total.toFixed(2)}`;
 
   attachRemoveFromCartEventListeners();
   attachQuantityChangeEventListeners();
 }
+
+// Calculate discount based on promo code
+function calculateDiscount(subtotal) {
+  if (!appliedPromoCode) return 0;
+  if (appliedPromoCode === "ostad10") return subtotal * 0.1;
+  if (appliedPromoCode === "ostad5") return subtotal * 0.05;
+  else return subtotal;
+  return 0;
+}
+
+// Handle promo code application
+document.getElementById("apply-promo").addEventListener("click", () => {
+  const promoInput = document.getElementById("promo-code");
+  const promoCode = promoInput.value.trim().toLowerCase();
+  const promoMessage = document.getElementById("promo-message");
+
+  if (promoCode === "ostad10" || promoCode === "ostad5") {
+    if (appliedPromoCode === promoCode) {
+      promoMessage.textContent = "Promo code already applied.";
+      promoMessage.style.color = "orange";
+    } else {
+      appliedPromoCode = promoCode;
+      promoMessage.textContent = `Promo code "${promoCode}" applied successfully.`;
+      promoMessage.style.color = "green";
+      updateCartUI();
+    }
+  } else {
+    promoMessage.textContent = "Invalid promo code.";
+    promoMessage.style.color = "red";
+  }
+
+  promoInput.value = "";
+});
 
 // Attach event listeners to "Remove" buttons
 function attachRemoveFromCartEventListeners() {
@@ -180,24 +223,6 @@ function changeQuantity(id, delta) {
     updateCartUI();
   }
 }
-
-// Handle Navbar links
-document.getElementById("home-link").addEventListener("click", () => {
-  document.getElementById("content").style.display = "block";
-  document.getElementById("product-list").innerHTML = "";
-});
-
-document.getElementById("product-link").addEventListener("click", () => {
-  document.getElementById("content").style.display = "none";
-  fetchProducts();
-});
-
-// Handle Search
-document.getElementById("search-form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const query = document.getElementById("search-input").value;
-  fetchProducts(query);
-});
 
 // Initialize
 fetchProducts();
